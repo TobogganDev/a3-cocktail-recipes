@@ -137,7 +137,7 @@ describe('searchCocktailByFirstLetter', () => {
 
 
 describe('searchIngredientByName',  () => { 
-  it('first', async () => {
+  it('should return ingredient infos when valid name is given', async () => {
     const mockData = {
       data: {
         ingredients: [

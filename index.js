@@ -1,6 +1,7 @@
 import { filterCocktailsByAlcoholicType, filterCocktailsByCategory, filterCocktailsByGlassType } from './src/filter.js';
 import { searchCocktailByName, searchCocktailByFirstLetter, searchIngredientByName } from "./src/search.js";
 import { listAlcoholTypes, listCocktailTypes, listGlassTypes, listIngredients } from "./src/list.js";
+import { lookupCocktailById, lookupIngredientById, lookupRandomCocktail } from './src/lookUp.js';
 
 // Example usage for the search functions:
 
@@ -44,3 +45,12 @@ import { listAlcoholTypes, listCocktailTypes, listGlassTypes, listIngredients } 
 //       console.error(error.message);
 //   }
 // })();
+
+// const margarita = await lookupCocktailById('11007');
+// console.log('Lookup by cocktail ID (11007):', margarita);
+
+// const gin = await lookupIngredientById('552');
+// console.log('Lookup by ingredient ID (552):', gin);
+
+const randomCocktail = await lookupRandomCocktail();
+console.log('Random cocktail:', randomCocktail);
